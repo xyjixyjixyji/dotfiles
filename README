@@ -1,0 +1,9 @@
+# Dotfiles
+
+The dotfiles are managed by GNU Stow.
+
+For any newly installed systems, do the following things.
+
+- Install GNU Stow
+- Use stow to symlink all packages in this repo
+
