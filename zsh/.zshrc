@@ -155,6 +155,7 @@ export LC_CTYPE="en_US.UTF-8"
 alias setproxy="export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890
 all_proxy=socks5://127.0.0.1:7890"
 alias unsetproxy="unset https_proxy;unset http_proxy;unset all_proxy"
+alias nv="nvim"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
