@@ -1,4 +1,15 @@
 require('lazy').setup({
+    {
+        'nvimdev/dashboard-nvim',
+        event = 'VimEnter',
+        config = function()
+            require('dashboard').setup {
+                -- config
+            }
+        end,
+        dependencies = { { 'nvim-tree/nvim-web-devicons' } }
+    },
+
     -- copilot
     { 'github/copilot.vim' },
 
@@ -149,7 +160,19 @@ require('lazy').setup({
         "lukas-reineke/indent-blankline.nvim",
         main = "ibl",
         config = function()
-            require("ibl").setup()
+            require('ibl').setup({
+                exclude = {
+                    filetypes = {
+                        'lspinfo',
+                        'packer',
+                        'checkhealth',
+                        'help',
+                        'man',
+                        'dashboard',
+                        '',
+                    },
+                },
+            })
         end,
         opts = {}
     },
