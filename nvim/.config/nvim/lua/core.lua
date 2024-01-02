@@ -1,7 +1,7 @@
 ------------
 -- Default settings and keymaps
 ------------
-local set = vim.opt
+vim.g.mapleader = ","
 
 vim.o.shiftwidth = 4
 vim.o.showmatch = true
@@ -23,10 +23,10 @@ vim.o.completeopt = 'menuone,noselect'
 vim.wo.signcolumn = 'yes'
 vim.wo.number = true
 
-set.expandtab = true
-set.tabstop = 4
-set.softtabstop = 4
-set.shiftwidth = 4
+vim.o.expandtab = true
+vim.o.tabstop = 4
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
 
 
 local function map(mode, lhs, rhs, opts)
