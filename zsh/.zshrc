@@ -18,11 +18,8 @@ export TERM="screen-256color"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="robbyrussell"
 #ZSH_THEME="powerlevel10k/powerlevel10k"
-# ZSH_THEME="steeef"
-ZSH_THEME="fishy"
-#ZSH_THEME="ys"
+ZSH_THEME="cypher"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -125,6 +122,10 @@ alias ls='exa --color=auto'
 alias cat='bat --style=plain'
 # riggrep instead of grep
 alias grep='rg'
+alias setproxy="export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890
+all_proxy=socks5://127.0.0.1:7890"
+alias unsetproxy="unset https_proxy;unset http_proxy;unset all_proxy"
+alias nv="nvim"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -152,10 +153,6 @@ export CONDA_EXE="$HOME/opt/anaconda3/bin/conda"
 export EDITOR="nvim"
 export LC_CTYPE="en_US.UTF-8"
 
-alias setproxy="export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890
-all_proxy=socks5://127.0.0.1:7890"
-alias unsetproxy="unset https_proxy;unset http_proxy;unset all_proxy"
-alias nv="nvim"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
