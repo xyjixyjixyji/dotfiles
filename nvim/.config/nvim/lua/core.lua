@@ -70,6 +70,9 @@ map('i', 'jk', '<Esc>', { noremap = false, silent = true })
 -- file tree
 map('n', '<C-f>', ':Neotree toggle<CR>', { noremap = true, silent = true })
 
+-- lazyGit
+map('n', '<leader>lg', ':LazyGit<CR>', { noremap = true, silent = true })
+
 -- hop
 local hop = require('hop')
 local directions = require('hop.hint').HintDirection
