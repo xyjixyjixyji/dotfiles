@@ -6,4 +6,5 @@ require('configs.colorschemes')
 require('configs.lualine')
 require('configs.treesitter')
 require('configs.dashboard')
+require('configs.ui')
 

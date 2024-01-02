@@ -12,9 +12,6 @@ return {
         end
     },
     {
-        'rcarriga/nvim-notify',
-    },
-    {
         -- the context on the tabline
         "utilyre/barbecue.nvim",
         name = "barbecue",

@@ -1,5 +1,8 @@
 return {
     {
+        'famiu/bufdelete.nvim'
+    },
+    {
         'github/copilot.vim'
     },
     {
@@ -34,4 +37,3 @@ return {
         end
     },
 }
-

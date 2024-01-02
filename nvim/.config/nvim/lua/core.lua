@@ -62,9 +62,12 @@ map("n", "<leader>l", "<cmd>vertical resize +2<cr>", { desc = "Increase window w
 -- buffers
 map("n", "<S-h>", "<cmd>BufferPrevious<cr>", { desc = "Prev buffer" })
 map("n", "<S-l>", "<cmd>BufferNext<cr>", { desc = "Next buffer" })
+map("c", "bd", "Bd")
 
+-- esc
 map('i', 'jk', '<Esc>', { noremap = false, silent = true })
 
+-- file tree
 map('n', '<C-f>', ':Neotree toggle<CR>', { noremap = true, silent = true })
 
 -- hop
