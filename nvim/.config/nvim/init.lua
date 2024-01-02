@@ -9,7 +9,7 @@ require('configs')
 require('core')
 
 vim.cmd 'set clipboard=unnamedplus'
-vim.cmd 'colorscheme night-owl'
+vim.cmd 'colorscheme tokyonight-night'
 
 -- auto format
 -- vim.api.nvim_create_augroup('AutoFormatting', {})
