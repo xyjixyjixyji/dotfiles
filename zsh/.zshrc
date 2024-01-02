@@ -126,6 +126,7 @@ alias setproxy="export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0
 all_proxy=socks5://127.0.0.1:7890"
 alias unsetproxy="unset https_proxy;unset http_proxy;unset all_proxy"
 alias nv="nvim"
+alias sz="source ~/.zshrc"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
