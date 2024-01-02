@@ -65,7 +65,7 @@ map("n", "<S-l>", "<cmd>BufferNext<cr>", { desc = "Next buffer" })
 
 map('i', 'jk', '<Esc>', { noremap = false, silent = true })
 
-map('n', '<C-f>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+map('n', '<C-f>', ':Neotree toggle<CR>', { noremap = true, silent = true })
 
 -- hop
 local hop = require('hop')

@@ -1,22 +1,29 @@
 return {
     {
-        'nvim-tree/nvim-tree.lua',
+        "nvim-neo-tree/neo-tree.nvim",
+        branch = "v3.x",
         dependencies = {
-            'nvim-tree/nvim-web-devicons', -- optional, for file icon
+            "nvim-lua/plenary.nvim",
+            "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+            "MunifTanjim/nui.nvim",
+            -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
         },
-        version = 'nightly',               -- optional, updated every week. (see issue #1193)
-        lazy = false,
         config = function()
-            require("nvim-tree").setup({
-                sort_by = "case_sensitive",
-                view = {
-                    width = 30,
+            require("neo-tree").setup({
+                sources = {
+                    "filesystem",
+                    "buffers",
+                    "git_status",
+                    "document_symbols",
                 },
-                renderer = {
-                    group_empty = true,
-                },
-                filters = {
-                    dotfiles = true,
+                source_selector = {
+                    winbar = true,
+                    statusline = false,
+                    sources = {
+                        { source = "filesystem" },
+                        { source = "buffers" },
+                        { source = "document_symbols" },
+                    },
                 },
             })
         end
