@@ -5,4 +5,5 @@ require('configs.rust')
 require('configs.colorschemes')
 require('configs.lualine')
 require('configs.treesitter')
+require('configs.dashboard')
 
