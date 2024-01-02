@@ -28,6 +28,10 @@ vim.o.tabstop = 4
 vim.o.softtabstop = 4
 vim.o.shiftwidth = 4
 
+vim.o.foldcolumn = '1' -- '0' is not bad
+vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+vim.o.foldlevelstart = 99
+vim.o.foldenable = true
 
 local function map(mode, lhs, rhs, opts)
     vim.keymap.set(mode, lhs, rhs, opts)
@@ -140,6 +144,14 @@ wk.register({
         s = { "<cmd>lua require'persistence'.stop()<CR>", "Stop persisting sessions" },
     },
 }, { prefix = "<leader>" })
+
+wk.register({
+    z = {
+        name = "Fold",
+        R = { "<cmd>lua require('ufo').openAllFolds()<CR>", "Open all folds" },
+        M = { "<cmd>lua require('ufo').closeAllFolds()<CR>", "Close all folds" },
+    }
+})
 
 -- misc
 -- toggle term
