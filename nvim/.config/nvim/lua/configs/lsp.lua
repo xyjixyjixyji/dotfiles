@@ -12,10 +12,33 @@ lspconfig.gopls.setup {
     on_attach = on_attach,
     capabilities = capabilities,
 }
-lspconfig.rust_analyzer.setup {
-    on_attach = on_attach,
-    capabilities = capabilities,
-}
+
+if vim.fn.executable("rust-analyzer") > 0 then
+    local rust_opt = {
+        tools = {
+            inlay_hints = {
+                auto = true,
+            },
+        },
+        server = {
+            settings = function(project_root)
+                local ra = require("rustaceanvim.config.server")
+                return ra.load_rust_analyzer_settings(project_root .. "/.vscode", {
+                    settings_file_pattern = "rust-analyzer.json",
+                })
+            end,
+        },
+        capabilities = capabilities,
+    }
+    vim.g.rustaceanvim = rust_opt
+    vim.g.rustfmt_autosave = 1
+end
+
+-- setup by rustaceanvim.nvim
+-- lspconfig.rust_analyzer.setup {
+--     on_attach = on_attach,
+--     capabilities = capabilities,
+-- }
 lspconfig.clangd.setup {
     on_attach = on_attach,
     capabilities = capabilities,
@@ -51,4 +74,3 @@ lspconfig.lua_ls.setup {
     on_attach = on_attach,
     capabilities = capabilities,
 }
-
