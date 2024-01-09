@@ -1,0 +1,44 @@
+format = """
+$directory\
+$git_branch\
+$git_status\
+$time\
+$character"""
+
+[username]
+show_always = true
+style_user = "bg:#9A348E"
+style_root = "bg:#9A348E"
+format = '[$user]($style)'
+
+[character]
+format = ''
+
+[directory]
+style = "fg:#000000"
+format = "[ $path ]($style)"
+truncation_length = 1
+truncation_symbol = "…/"
+home_symbol = "~"
+
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+style = "bold"
+symbol = ""
+format = '[[\[$symbol $branch\] ](fg:#222222)]($style)'
+
+[git_status]
+disabled = true
+style = "bg:#394260"
+format = '[[($all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)'
+
+[time]
+disabled = true
+time_format = "%R" # Hour:Minute Format
+style = "bg:#1d2230"
+format = '[[ $time ](fg:#a0a9cb bg:#1d2230)]($style)'

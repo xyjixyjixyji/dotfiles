@@ -1,24 +1,15 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
- source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.config/zsh/.oh-my-zsh"
-export PATH="/usr/local/opt/libressl/bin:$PATH"
 
-export TERM="screen-256color"
+# export TERM="screen-256color"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="powerlevel10k/powerlevel10k"
 ZSH_THEME="cypher"
 
 # Set list of themes to pick from when loading at random
@@ -81,7 +72,13 @@ ZSH_THEME="cypher"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting z zsh-autosuggestions extract sudo copyfile)
+plugins=(git
+         zsh-syntax-highlighting
+         z
+         zsh-autosuggestions
+         extract
+         sudo
+         copyfile)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -108,8 +105,6 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gdbv="riscv64-unknown-elf-gdb"
 alias tnew="tmux new -s"
 alias tatt="tmux a -t"
@@ -142,18 +137,17 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-export PATH=$PATH:$HOME/PATHS/clang+llvm-16.0.3-arm64-apple-darwin22.0/bin:$HOME/.local/bin:/opt/homebrew/opt/curl/bin:/opt/homebrew/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:/Applications/CMake.app/Contents/bin:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$HOME/opt/anaconda3/bin:/Users/Ji/opt/anaconda3/condabin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.cargo/bin:/usr/local/opt/riscv-gnu-toolchain/bin:/Library/tex/texbin:/Users/Ji/llvm-project/build/bin:/opt/homebrew/Cellar/llvm/13.0.1_1/bin:$HOME/nvim-macos/bin
+
+export PATH=$PATH:$HOME/PATHS/clang+llvm-16.0.3-arm64-apple-darwin22.0/bin:$HOME/.local/bin:/opt/homebrew/opt/curl/bin:/opt/homebrew/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:/Applications/CMake.app/Contents/bin:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$HOME/opt/anaconda3/bin:/Users/Ji/opt/anaconda3/condabin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.cargo/bin:/usr/local/opt/riscv-gnu-toolchain/bin:/Library/tex/texbin:/Users/Ji/llvm-project/build/bin:/opt/homebrew/Cellar/llvm/13.0.1_1/bin:/usr/local/nvim-macos/bin
 
 export TERMINFO="/usr/share/terminfo"
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 export CONDA_EXE="$HOME/opt/anaconda3/bin/conda"
-
 export EDITOR="nvim"
 export LC_CTYPE="en_US.UTF-8"
 
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# starship
+eval "$(starship init zsh)"
 
