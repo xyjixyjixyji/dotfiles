@@ -157,7 +157,6 @@ wk.register({
 -- toggle term
 vim.keymap.set({ 'n', 't' }, '<A-j>', '<cmd>Lspsaga term_toggle<CR>', bufopts)
 
-
 --------------------
 -- Auto commands
 --------------------
