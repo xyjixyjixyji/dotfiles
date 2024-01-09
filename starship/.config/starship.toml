@@ -1,15 +1,26 @@
 format = """
+$username\
+$hostname\
 $directory\
 $git_branch\
 $git_status\
 $time\
 $character"""
 
+add_newline = false
+
 [username]
 show_always = true
-style_user = "bg:#9A348E"
+style_user = "fg:#000000"
 style_root = "bg:#9A348E"
-format = '[$user]($style)'
+format = '[\[$user\]]($style)'
+disabled = false
+
+[hostname]
+ssh_only = false
+ssh_symbol = ""
+style = ""
+format = '[\[$ssh_symbol$hostname\]]($style)'
 
 [character]
 format = ''
