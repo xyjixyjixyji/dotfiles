@@ -111,8 +111,6 @@ alias l='exa'
 alias la='exa -a'
 alias ll='exa -lah'
 alias ls='exa --color=auto'
-# bat instead of cat
-alias cat='bat --style=plain'
 # riggrep instead of grep
 alias grep='rg'
 alias setproxy="export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890
@@ -148,4 +146,7 @@ export LC_CTYPE="en_US.UTF-8"
 
 # starship
 eval "$(starship init zsh)"
+
+export PATH=/Users/Ji/.opam/default/bin:$PATH
+export PATH=/usr/local/smlnj/bin/:$PATH
 

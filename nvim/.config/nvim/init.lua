@@ -8,8 +8,9 @@ require('plugins')
 require('configs')
 require('core')
 
+vim.cmd 'syntax enable'
 vim.cmd 'set clipboard=unnamedplus'
-vim.cmd 'colorscheme acme'
+vim.cmd 'colorscheme vscode'
 
 -- auto format
 -- vim.api.nvim_create_augroup('AutoFormatting', {})
