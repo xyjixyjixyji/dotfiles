@@ -16,11 +16,15 @@ foreground = "#000000"
 osc52 = "CopyPaste"
 
 [font]
-normal = { family = "MesloLGL Nerd Font" }
-bold = { family = "MesloLGL Nerd Font" }
-bold_italic = { family = "MesloLGL Nerd Font" }
-italic = { family = "MesloLGL Nerd Font" }
+normal = { family = "ComicShannsMono Nerd Font" }
+bold = { family = "ComicShannsMono Nerd Font" }
+bold_italic = { family = "ComicShannsMono Nerd Font" }
+italic = { family = "ComicShannsMono Nerd Font" }
 size = 13
+
+[font.offset]
+x = 1
+y = 5
 
 [cursor]
 style = { shape = "Block" }
