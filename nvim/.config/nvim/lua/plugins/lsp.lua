@@ -40,5 +40,11 @@ return {
         "folke/trouble.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons" },
     },
+    -- guess indent
+    {
+        'nmac427/guess-indent.nvim',
+        config = function()
+            require("guess-indent").setup {}
+        end
+    },
 }
-

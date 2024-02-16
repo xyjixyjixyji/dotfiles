@@ -135,18 +135,19 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 export PATH=$PATH:$HOME/PATHS/clang+llvm-16.0.3-arm64-apple-darwin22.0/bin:$HOME/.local/bin:/opt/homebrew/opt/curl/bin:/opt/homebrew/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:/Applications/CMake.app/Contents/bin:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$HOME/opt/anaconda3/bin:/Users/Ji/opt/anaconda3/condabin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.cargo/bin:/usr/local/opt/riscv-gnu-toolchain/bin:/Library/tex/texbin:/Users/Ji/llvm-project/build/bin:/opt/homebrew/Cellar/llvm/13.0.1_1/bin:/usr/local/nvim-macos/bin
+export PATH=/Users/Ji/.opam/default/bin:$PATH
+export PATH=/usr/local/smlnj/bin/:$PATH
+export PATH=/home/usr/.local/share/nvim/mason/bin/:$PATH
 
 export TERMINFO="/usr/share/terminfo"
 export CONDA_EXE="$HOME/opt/anaconda3/bin/conda"
 export EDITOR="nvim"
 export LC_CTYPE="en_US.UTF-8"
 
-
-# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # starship
 eval "$(starship init zsh)"
 
-export PATH=/Users/Ji/.opam/default/bin:$PATH
-export PATH=/usr/local/smlnj/bin/:$PATH
+export UNAME="Darwin"
 
