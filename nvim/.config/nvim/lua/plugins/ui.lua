@@ -28,26 +28,6 @@ return {
         'nvim-lualine/lualine.nvim',
         dependencies = { 'nvim-tree/nvim-web-devicons', lazy = true },
     },
-    {
-        "lukas-reineke/indent-blankline.nvim",
-        main = "ibl",
-        config = function()
-            require('ibl').setup({
-                exclude = {
-                    filetypes = {
-                        'lspinfo',
-                        'packer',
-                        'checkhealth',
-                        'help',
-                        'man',
-                        'dashboard',
-                        '',
-                    },
-                },
-            })
-        end,
-        opts = {}
-    },
     --
     -- colorschemes below
     --
