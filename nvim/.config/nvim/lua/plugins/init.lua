@@ -2,8 +2,8 @@ local vim = vim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
     vim.fn.system(
-        {"git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", "--branch=stable", -- latest stable release
-         lazypath})
+        { "git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", "--branch=stable", -- latest stable release
+            lazypath })
 end
 vim.opt.rtp:prepend(lazypath)
 
@@ -24,7 +24,7 @@ local whichkey = require('plugins.whichkey')
 
 local concatenateTables = function(...)
     local result = {}
-    for _, tableToConcatenate in ipairs {...} do
+    for _, tableToConcatenate in ipairs { ... } do
         for i = 1, #tableToConcatenate do
             result[#result + 1] = tableToConcatenate[i]
         end

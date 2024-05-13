@@ -1,29 +1,24 @@
 return {
     {
-        "nvim-neo-tree/neo-tree.nvim",
-        branch = "v3.x",
+        "nvim-tree/nvim-tree.lua",
+        version = "*",
+        lazy = false,
         dependencies = {
-            "nvim-lua/plenary.nvim",
-            "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-            "MunifTanjim/nui.nvim",
-            -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+            "nvim-tree/nvim-web-devicons",
         },
         config = function()
-            require("neo-tree").setup({
-                sources = {
-                    "filesystem",
-                    "buffers",
-                    "git_status",
-                    "document_symbols",
+            require("nvim-tree").setup({
+                sort = {
+                    sorter = "case_sensitive",
                 },
-                source_selector = {
-                    winbar = true,
-                    statusline = false,
-                    sources = {
-                        { source = "filesystem" },
-                        { source = "buffers" },
-                        { source = "document_symbols" },
-                    },
+                view = {
+                    width = 30,
+                },
+                renderer = {
+                    group_empty = true,
+                },
+                filters = {
+                    dotfiles = true,
                 },
             })
         end

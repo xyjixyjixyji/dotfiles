@@ -138,6 +138,7 @@ export PATH=$PATH:$HOME/PATHS/clang+llvm-16.0.3-arm64-apple-darwin22.0/bin:$HOME
 export PATH=/Users/Ji/.opam/default/bin:$PATH
 export PATH=/usr/local/smlnj/bin/:$PATH
 export PATH=/home/usr/.local/share/nvim/mason/bin/:$PATH
+export PATH=/opt/homebrew/anaconda3/bin:$PATH
 
 export TERMINFO="/usr/share/terminfo"
 export CONDA_EXE="$HOME/opt/anaconda3/bin/conda"
@@ -150,4 +151,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 eval "$(starship init zsh)"
 
 export UNAME="Darwin"
+
+alias andrewl="sshpass -p Zina20010414! ssh xinyouj@linux.andrew.cmu.edu"
 
