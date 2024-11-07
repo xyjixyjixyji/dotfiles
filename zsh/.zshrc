@@ -121,27 +121,27 @@ alias sz="source ~/.zshrc"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/Ji/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/opt/homebrew/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/Ji/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/Ji/opt/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/opt/homebrew/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/homebrew/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/Ji/opt/anaconda3/bin:$PATH"
+        export PATH="/opt/homebrew/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-export PATH=$PATH:$HOME/PATHS/clang+llvm-16.0.3-arm64-apple-darwin22.0/bin:$HOME/.local/bin:/opt/homebrew/opt/curl/bin:/opt/homebrew/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:/Applications/CMake.app/Contents/bin:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$HOME/opt/anaconda3/bin:/Users/Ji/opt/anaconda3/condabin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.cargo/bin:/usr/local/opt/riscv-gnu-toolchain/bin:/Library/tex/texbin:/Users/Ji/llvm-project/build/bin:/opt/homebrew/Cellar/llvm/13.0.1_1/bin:/usr/local/nvim-macos/bin
+export PATH=$PATH::$HOME/.local/bin:/opt/homebrew/opt/curl/bin:/opt/homebrew/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:/Applications/CMake.app/Contents/bin:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$HOME/opt/anaconda3/bin:/Users/Ji/opt/anaconda3/condabin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.cargo/bin:/usr/local/opt/riscv-gnu-toolchain/bin:/Library/tex/texbin:/usr/local/nvim-macos/bin
 export PATH=/Users/Ji/.opam/default/bin:$PATH
 export PATH=/usr/local/smlnj/bin/:$PATH
 export PATH=/home/usr/.local/share/nvim/mason/bin/:$PATH
 export PATH=/opt/homebrew/anaconda3/bin:$PATH
 
 export TERMINFO="/usr/share/terminfo"
-export CONDA_EXE="$HOME/opt/anaconda3/bin/conda"
+export CONDA_EXE="/opt/homebrew/anaconda3/bin/conda"
 export EDITOR="nvim"
 export LC_CTYPE="en_US.UTF-8"
 
@@ -152,5 +152,15 @@ eval "$(starship init zsh)"
 
 export UNAME="Darwin"
 
-alias andrewl="sshpass -p Zina20010414! ssh xinyouj@linux.andrew.cmu.edu"
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 
+unset HOMEBREW_BOTTLE_DOMAIN
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export PATH="$HOME/Documents/cmu/17770/virgil/bin:$PATH"
+export PATH="$HOME/.emacs.d/bin:$PATH"
+export PATH="/opt/homebrew/opt/binutils/bin:$PATH"
+export PATH="$HOME/third_party/flex-sdk/bin:$PATH"
+
+alias ec="emacsclient -c -a 'emacs'"
+alias ecnw="emacsclient -nw -a 'emacs'"
+alias maccleanup="sudo /usr/local/bin/mac-cleanup"

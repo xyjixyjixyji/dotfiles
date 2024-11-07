@@ -42,7 +42,7 @@ yabai -m config mouse_drop_action            swap
 
 # general space settings
 yabai -m config layout                       bsp
-yabai -m config top_padding                  28
+yabai -m config top_padding                  06
 yabai -m config bottom_padding               06
 yabai -m config left_padding                 06
 yabai -m config right_padding                06
@@ -54,4 +54,5 @@ yabai -m config external_bar all:0:0
 
 osascript -e 'tell application id "tracesOf.Uebersicht" to refresh'
 
+# float apps
 echo "yabai configuration loaded.."
